@@ -1,0 +1,13 @@
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("POST", 'xhr-test.php', true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.onreadystatechange = function () {
+	if (xmlhttp.readyState == 4) {
+		if (xmlhttp.status == 200) {
+			console.log(xmlhttp.responseText);
+		}
+	}
+};
+xmlhttp.send('test=1');
+</script>
